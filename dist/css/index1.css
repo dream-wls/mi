@@ -157,15 +157,31 @@ table {
 .nav {
   height: 55px;
   line-height: 55px;
-  /*background: #333333;*/
-  /*margin: 22px 0px 23px 0px;*/
   margin: 0 auto;
   margin-top: 22px;
   margin-bottom: 22px;
   position: relative; }
 
 .nav .nav-l {
-  float: left; }
+  width: 55px;
+  height: 55px;
+  background-color: red;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: #ff6700;
+  opacity: 1;
+  float: left;
+  cursor: pointer; }
+  .nav .nav-l .mylogo {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top: 0;
+    left: 0;
+    background: url(../image/mi-logo.png) no-repeat 50% 50%; }
+    .nav .nav-l .mylogo:hover {
+      background: url(../image/mi-home.png); }
 
 .nav .nav-m {
   position: absolute;
@@ -698,3 +714,20 @@ table {
       color: #757575; }
     .site-info .myp a:hover {
       color: #ff6700; }
+
+.mi-float {
+  width: 84px;
+  height: 560px;
+  background-color: #ff6700;
+  position: fixed;
+  bottom: 70px;
+  right: 0;
+  z-index: 99px; }
+  .mi-float a {
+    display: block;
+    width: 84px;
+    height: 92px;
+    background: red; }
+    .mi-float a span {
+      color: #757575;
+      font-size: 24px; }

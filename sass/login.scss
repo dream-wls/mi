@@ -1,5 +1,5 @@
 .w {
-    width: 990px;
+    width: 1130px;
     margin: 0 auto;
 }
 
@@ -9,19 +9,12 @@
 }
 .login {
     width: 300px;
-    height: 60px;
+    height: 98px;
     margin: 10px auto;
     position: relative;
 
 }
-.login b {
-    width: 110px;
-    height: 40px;
-    position: absolute;
-    font-size: 25px;
-    right: 0;
-    bottom: 0;
-}
+ 
 .login {
     float: left;
     position: relative;
@@ -34,6 +27,14 @@
    bottom: 0;
    right: 0;
 }
+.content {
+    height:588px;
+    width: 100%;
+    background: url(../image/login/login_bg.jpg);
+    // background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
 .content-wrapper {
     font-size: 12px;
     padding-top: 10px;
@@ -44,61 +45,143 @@
     color: #999;
 }
 .content-login-wrap {
-    width: 990px;
+    width: 1130px;
     height: 475px;
-    background-color: #999;
     position: relative;
 }
 .login-box {
-    width: 346px;
-    height: 438px;
-    background: blue;
+    width: 410px;
+    height: 564px;
+    background: #fff;
     position: absolute;
     right: 0;
     top: 10px;
-    /* padding: 20px; */
+}
+.login-btn a {
+    color: #666;
+    font-size: 24px;
+
+}
+// 选择了哪个方式
+.login-btn .select {
+    color: #f56600;
+}
+.line {
+    width: 1px;
+    height: 24px;
+    margin: 0 35px 0 42px;
+    border: 1px solid #e0e0e0;
 }
 .login-btn{
-    width: 100%;
-    height: 55px;
+    height: 33px;
+    padding: 27px 0 24px;
+    text-align: center;
+    font-size: 24px;
+    color: #666;
 }
-.login-tal-l {
-    width: 173px;
-    height: 55px;
-    line-height: 55px;
+.input1 input,
+.input2 input{
+    width: 317px;
+    height: 22px;
+    line-height: 22px;
+    padding: 13px 16px 13px 14px;
+    display: block;
+    margin-bottom: 14px;
+    border: 1px solid #e0e0e0;
+}
 
-    background: #ccc;
-    font-size: 18px;
-    color: #000;
-
-    text-align: center;
-    float: left;
-}
-.login-tal-r {
-    width: 173px;
-    height: 55px;
-    line-height: 55px;
-    background: #ccc;
-    font-size: 18px;
-    color: #000;
-    text-align: center;
-    float: right;
-}
-.tips-wapper {
-    background: #fff8f0;
-    color: #999;
-    text-align: center;
+ .login-enter {
+    background-color: #ff6700;
     width: 100%;
-    height: 19px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 12px;
-}
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+ }
+
 .form-login {
     margin-top: 33px;
+    width: 348px;
+    height: 480px;
+    // background-color: red;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.form-callregin {
+    text-align: center;
+    color: #ff6700;
+    border: 0 none;
+    // height: auto;
+    line-height: normal;
+    // margin: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form-myreg {
+    padding-top: 0;
+    color: #999;
+    a {
+        color: #999;
+    }
+}
+.login-txt {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 143px;
 
 }
-.form-login .input1{
-    width: 304px;
-    height: 38px;
+.type-link {
+    width: 348px;
+    height: 34px;
+    text-align: center;
+}
+.type-link a{
+    display: block;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+}
+
+.footer {
+    padding-top: 100px;
+    height: 80px;
+}
+
+.footer-links {
+    text-align: center;
+    color: #757575;
+
+    a {
+        color: #757575;
+        padding: 10px;
+
+    }
+    a:hover {
+        color: #333;
+
+    }
+    .active {
+    color: #333;
+    }
+}
+
+.copyright {
+    padding: 10px;
+    text-align: center;
+    color: #757575;
 }
