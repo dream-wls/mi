@@ -141,22 +141,63 @@
     margin: 0 auto;
     text-align: center;
     margin-top: 143px;
+    height: 21px;
+    padding: 10px;
 
 }
 .type-link {
     width: 348px;
     height: 34px;
     text-align: center;
+    i {
+        margin: 4px 6px;
+        display: block;
+        width: 18px;
+        height: 19px;
+        background-size: auto;
+        background: url(../image/login/icons_type.png)  no-repeat;
+
+    }
+    .type-i-qq {
+        background-position: -19px 0px;
+    }
+    .type-i-wb {
+        background: url(../image/login/icons_type.png)  no-repeat;
+        background-position: -37px 0px;
+    }
+    .type-i-zfb {
+        background: url(../image/login/icons_type.png)  no-repeat;
+        background-position: -56px 0px;
+    }
+    .type-i-wx {
+        background: url(../image/login/icons_type.png)  no-repeat;
+        background-position: -84px 0px;
+    }
+
+    .type-link-qq{
+        background-color: #0288d1;
+    }
+    .type-link-wb{
+        background-color: #d32f2f;
+    }
+    .type-link-zfb{
+        background-color: #0ae;
+    }
+    .type-link-wx{
+        background-color: #00d20d;
+    }
+
 }
 .type-link a{
-    display: block;
+    display: inline-block;
     background-color: red;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    float: left;
+    // float: left;
+    margin: 0 17px;
 }
-
+ 
 .footer {
     padding-top: 100px;
     height: 80px;
