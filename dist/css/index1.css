@@ -30,6 +30,9 @@ table {
   margin: 0 auto;
   min-width: 900px; }
 
+body, html {
+  width: 100%; }
+
 @font-face {
   font-family: 'iconfont';
   src: url("../myfont/iconfont.eot");
@@ -195,9 +198,37 @@ table {
   margin-left: 242px; }
 
 .nav .nav-c li {
-  margin-right: 20px;
+  padding-right: 20px;
   font-size: 16px;
   float: left; }
+
+.header-nav-menu {
+  width: 1500px;
+  height: 230px;
+  background: blue;
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  z-index: 99;
+  display: none; }
+
+.item-children {
+  display: block;
+  width: 204px;
+  height: 195	px;
+  background: red;
+  padding: 35px 12px 0;
+  text-align: center; }
+  .item-children .children-img img {
+    width: 160px;
+    height: 110px; }
+  .item-children .children-title {
+    color: #333;
+    font-size: 12px; }
+  .item-children .children-price {
+    line-height: 20px;
+    color: #ff6700;
+    font-size: 12px; }
 
 .nav .nav-c a:hover {
   color: #ff6700; }
@@ -548,6 +579,10 @@ table {
         font-size: 24px;
         color: #b0b0b0;
         vertical-align: middle; }
+    .page-main .page-phone .page-phone-items .page-phone-items-l {
+      height: 614px;
+      width: 234px;
+      background-color: red; }
 
 .home {
   height: 736px;

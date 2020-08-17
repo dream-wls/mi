@@ -21,3 +21,274 @@
   .container::after {
     content: " ";
     display: table; }
+
+.product-box {
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 12px; }
+  .product-box .product-box-banner {
+    float: left; }
+    .product-box .product-box-banner .img-box {
+      width: 560px;
+      height: 560px; }
+      .product-box .product-box-banner .img-box img {
+        width: 560px;
+        height: 560px; }
+  .product-box .product-con {
+    width: 600px;
+    margin-left: 20px;
+    float: right; }
+    .product-box .product-con h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      font-weight: 400;
+      color: #212121; }
+    .product-box .product-con .sale-desc {
+      color: #b0b0b0;
+      margin: 0;
+      padding: 0;
+      padding-top: 8px;
+      line-height: 1.5; }
+      .product-box .product-con .sale-desc span {
+        color: #ff4a00; }
+    .product-box .product-con .company-info {
+      color: #ff6700;
+      font-size: 14px;
+      display: block;
+      font-size: 18px;
+      line-height: 1;
+      color: #ff6700;
+      padding: 12px 0 10px; }
+    .product-box .product-con .price-info {
+      display: block;
+      font-size: 18px;
+      line-height: 1;
+      color: #ff6700;
+      padding: 12px 0 10px; }
+    .product-box .product-con .line {
+      margin-top: 12px;
+      border-bottom: 1px solid #e0e0e0; }
+    .product-box .product-con .subscrible-info {
+      position: relative;
+      height: 52px;
+      background: url(../image/goods/booking.png) 50% 0 no-repeat;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      color: #fff;
+      margin-top: 15px; }
+      .product-box .product-con .subscrible-info .subscrible-info-l {
+        width: 430px;
+        height: 52px;
+        line-height: 52px;
+        float: left; }
+        .product-box .product-con .subscrible-info .subscrible-info-l .appointment {
+          text-align: right;
+          width: 55px;
+          line-height: 52px;
+          font-size: 14px;
+          display: block;
+          float: left; }
+        .product-box .product-con .subscrible-info .subscrible-info-l .price {
+          font-size: 22px;
+          margin-left: 8px; }
+      .product-box .product-con .subscrible-info .subscrible-info-r {
+        width: 188px;
+        height: 52px;
+        line-height: 52px;
+        float: right;
+        color: #fff; }
+        .product-box .product-con .subscrible-info .subscrible-info-r .tips {
+          color: #fff;
+          float: left;
+          margin-left: 20px;
+          margin-right: 12px; }
+        .product-box .product-con .subscrible-info .subscrible-info-r .endtime {
+          float: left; }
+          .product-box .product-con .subscrible-info .subscrible-info-r .endtime .hour,
+          .product-box .product-con .subscrible-info .subscrible-info-r .endtime .minute,
+          .product-box .product-con .subscrible-info .subscrible-info-r .endtime .second {
+            text-align: center;
+            vertical-align: middle;
+            width: 18px;
+            height: 18px;
+            background: #c20000;
+            border-radius: 2px;
+            margin: 0 6px;
+            line-height: 16px; }
+    .product-box .product-con .product-address {
+      padding: 30px 50px;
+      position: relative;
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      margin: 20px 0; }
+    .product-box .product-con .buy-option {
+      width: 135px;
+      height: 600px; }
+      .product-box .product-con .buy-option .buy-box-child .title {
+        color: #333;
+        font-size: 18px; }
+      .product-box .product-con .buy-option .buy-box-child .clearfix li {
+        margin-right: 12px;
+        margin-top: 10px;
+        line-height: 42px;
+        height: 42px;
+        position: relative;
+        border: 1px solid #e0e0e0;
+        list-style: none;
+        cursor: pointer;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        float: left;
+        width: 292px;
+        font-size: 16px;
+        text-align: center; }
+      .product-box .product-con .buy-option .buy-box-child .clearfix .active {
+        border-color: #ff6700; }
+    .product-box .product-con .service-box .title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1; }
+    .product-box .product-con .service-box .accident {
+      color: #ff6700;
+      font-size: 14px;
+      float: right;
+      line-height: 18px; }
+    .product-box .product-con .service-box li {
+      border: 1px solid #e0e0e0;
+      margin-top: -1px;
+      background: #fff;
+      cursor: pointer;
+      padding: 30px 0;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      color: #333; }
+      .product-box .product-con .service-box li i {
+        display: block;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        margin-left: 30px;
+        float: left;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px; }
+        .product-box .product-con .service-box li i em {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 1px solid #b0b0b0;
+          font-style: normal;
+          line-height: 24px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: middle;
+          margin-top: -4px; }
+      .product-box .product-con .service-box li img {
+        width: 50px;
+        height: 50px;
+        background: red;
+        margin-right: 15px;
+        margin-left: 10px;
+        float: left; }
+      .product-box .product-con .service-box li .service-text h3 {
+        font-size: 18px;
+        margin: 0 0 10px 0; }
+        .product-box .product-con .service-box li .service-text h3 em {
+          font-style: normal;
+          font-size: 14px;
+          background: #ff6700;
+          display: inline-block;
+          padding: 2px 6px;
+          border-radius: 20px;
+          color: #fff;
+          margin-left: 2px; }
+      .product-box .product-con .service-box li .service-text .desc {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        height: 18px;
+        color: #b0b0b0;
+        width: 286px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 5px; }
+      .product-box .product-con .service-box li .service-text .agreement-box {
+        margin-top: 5px;
+        font-size: 14px; }
+        .product-box .product-con .service-box li .service-text .agreement-box em {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 1px solid #b0b0b0;
+          font-style: normal;
+          line-height: 24px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: middle;
+          margin-top: -4px; }
+      .product-box .product-con .service-box li .service-text .price {
+        position: absolute;
+        right: 20px;
+        bottom: 28px;
+        color: #757575; }
+    .product-box .product-con .selected-list {
+      background: #f9f9fa;
+      padding: 30px;
+      margin-bottom: 30px; }
+      .product-box .product-con .selected-list ul li {
+        list-style: none;
+        line-height: 30px;
+        color: #616161; }
+      .product-box .product-con .selected-list .total-price {
+        color: #ff6700;
+        font-size: 24px;
+        padding-top: 20px; }
+    .product-box .product-con .btn-box .sale-btn {
+      float: left;
+      text-align: center;
+      width: 298px;
+      height: 52px;
+      line-height: 52px;
+      font-size: 16px;
+      background: #ff6700;
+      border-color: #ff6700;
+      display: inline-block;
+      margin-right: 10px; }
+      .product-box .product-con .btn-box .sale-btn a {
+        color: #fff; }
+    .product-box .product-con .btn-box .favorite-btn {
+      float: left;
+      display: block;
+      width: 140px;
+      height: 52px;
+      line-height: 52px;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #b0b0b0;
+      text-align: center;
+      cursor: pointer;
+      background: #b0b0b0;
+      border-color: #b0b0b0;
+      transition: all .4s;
+      font-size: 16px;
+      position: relative; }
+      .product-box .product-con .btn-box .favorite-btn a {
+        color: #fff; }
+    .product-box .product-con .after-sale-info {
+      width: 600px;
+      height: 82px; }
+      .product-box .product-con .after-sale-info a {
+        display: inline-block;
+        margin-right: 15px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        cursor: default;
+        white-space: nowrap;
+        color: #b0b0b0; }

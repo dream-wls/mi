@@ -226,3 +226,22 @@
     text-align: center;
     color: #757575;
 }
+
+.twocode {
+    width: 182px;
+    height: 182px;
+    background: url(../image/login/code-mi.png);
+    background-size: 100%;
+    margin: 100px auto 0px;
+    cursor: pointer;
+}
+.sub_txt {
+    span {
+        padding: 0 5px;
+        color: #ff6700;
+    }
+    height: 44px;
+    color: #757575;
+    font-size: 14px;
+    margin-top: 13px;
+}

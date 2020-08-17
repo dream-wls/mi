@@ -57,15 +57,65 @@
 				<img src="../image/love.gif" alt="" srcset="">
 			</div>
 			<div class="nav-c">
-				<ul>
-					<li><a href="#">小米手机</a></li>
-					<li><a href="#">Redmi红米</a></li>
-					<li><a href="#">电视笔记本</a></li>
-					<li><a href="#">家电</a></li>
-					<li><a href="#">路由器</a></li>
-					<li><a href="#">智能硬件</a></li>
-					<li><a href="#">服务</a></li>
-					<li><a href="#">社区</a></li>
+				<ul class="nav-ul">
+					
+					<li class="nav-item">
+						<a class="nav-item-my" href="javascript:void(0)">小米手机</a>
+						<div class="header-nav-menu">
+							<ul>
+								<li>
+									<a class="item-children" href="javascript:void(0)">
+										<div class="children-img"><img src="../image/top-nav/03.png" alt=""></div>
+										<div class="children-title"></div>
+										<p class="children-price"></p>
+									</a>
+								</li>
+								<li>
+									<a class="item-children" href="javascript:void(0)">
+										<div class="children-img">12</div>
+										<div class="children-title">32</div>
+										<p class="children-price">23</p>
+									</a>
+								</li>
+								<li>
+									<a class="item-children" href="javascript:void(0)">
+										<div class="children-img">12</div>
+										<div class="children-title">32</div>
+										<p class="children-price">23</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- <div class="item-children">
+							<div class="container">
+								<ul class="children-list">
+									<li>
+										<a href="javascript:void(0)">
+											<div class="children-img"></div>
+											<div class="children-title"></div>
+											<p class="children-price"></p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-item-my" href="javascript:void(0)">Redmi红米</a>
+						<div class="header-nav-menu">
+							<ul>
+								<li><a href="javascript:void(0)">Redmi红米</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-item-my" href="javascript:void(0)">电视</a></li>
+					<li class="nav-item"><a class="nav-item-my" href="javascript:void(0)">笔记本</a></li>
+					<li class="nav-item"><a class="nav-item-my" href="javascript:void(0)">家电</a></li>
+					<li class="nav-item"><a class="nav-item-my" href="javascript:void(0)">路由器</a></li>
+					<li class="nav-item"><a class="nav-item-my" href="javascript:void(0)">智能硬件</a></li>
+
+					<li class="nav-item"><a class="nav-item-my" href="javascript:void(0)">服务</a></li>
+					<li class="nav-item"><a class="nav-item-my" href="javascript:void(0)">社区</a></li>
 				</ul>
 			</div>
 			<div class="nav-r">
@@ -210,7 +260,19 @@
 						</a>
 					</div>
 					<div class="page-phone-items">
-						<div class="page-phone-items-l"></div>
+						<div class="page-phone-items-l">
+
+						</div>
+						<div class="page-phone-items-r">
+							<ul>
+								<li>
+									<div class="figure-img"></div>
+									<h3></h3>
+									<p></p>
+									<p></p>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 					<!-- 家电 -->
@@ -441,6 +503,7 @@
 	<script src="../script/jquery-3.5.1.js"></script>
 	<script src="../script/swiper.animate1.0.3.min.js"></script>
 	<script src="../script/index.js" type="module"></script>
+	<script src="../script/indexAjax.js"></script>
 	<!-- <script>
 		    var mySwiper = new Swiper('.swiper-container', {
         direction: 'vertical', // 垂直切换选项

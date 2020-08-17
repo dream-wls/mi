@@ -1,0 +1,50 @@
+.register {
+  background: #f9f9f9;
+  height: 640px; }
+  .register .main-container {
+    width: 786px;
+    height: 520px;
+    background: #fff;
+    padding: 34px 34px 0;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding: 34px 34px 0; }
+    .register .main-container .title-big {
+      font-size: 30px;
+      font-weight: normal;
+      color: #333; }
+    .register .main-container .tit-normal {
+      padding-bottom: 5px;
+      color: #333;
+      font-weight: normal;
+      font-size: 14px; }
+    .register .main-container .select-regions-ad {
+      height: 40px;
+      padding-left: 14px;
+      line-height: 40px;
+      display: inline-block;
+      vertical-align: middle;
+      border: 1px solid #e8e8e8;
+      color: #555;
+      cursor: pointer; }
+    .register .main-container .labelbox {
+      width: 330px;
+      height: 42px;
+      margin: 0 auto;
+      line-height: 42px;
+      text-align: center;
+      font-size: 14px;
+      display: block;
+      cursor: pointer;
+      border: 1px solid #e8e8e8;
+      overflow: hidden;
+      background-color: #ff6700;
+      margin-top: 15px;
+      border: 1px solid rgba(186, 186, 186, 0.3);
+      *border: 0 none;
+      color: #fff; }
+    .register .main-container .submit-step {
+      color: #9d9d9d;
+      text-align: center; }
+      .register .main-container .submit-step a {
+        color: #333; }

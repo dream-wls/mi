@@ -16,6 +16,14 @@ task('image', async ()=>{
   .pipe(dest('./dist/image'))
   .pipe(load.connect.reload())
 })
+
+//处理请求图片
+task('images', async ()=>{
+  src('./images/**/*.*')
+  .pipe(dest('./dist/images'))
+  .pipe(load.connect.reload())
+})
+
 //处理字体图标
 task('font', async ()=>{
   src('./myfont/*.*')
@@ -68,4 +76,4 @@ task('connect',async ()=>{
 })
 
 // 构建开发包
-task('dev',series('data','delDist','image','sass','script','html','connect','watch','font'))
+task('dev',series('images','data','delDist','image','sass','script','html','connect','watch','font'))

@@ -4,7 +4,6 @@ export default function fn1(){
    console.log('dfgdrg');
     console.log( $('.head-buyC'));
     $('.head-buyC').mouseenter(function() {
-        console.log($(this));
         console.log($(this).find('.head-buy-menu'));
         $(this).find('.head-buy-menu').stop(true).slideDown(300);
 
@@ -12,6 +11,19 @@ export default function fn1(){
     $('.head-buyC').mouseleave(function() {
         $(this).find('.head-buy-menu').stop(true).slideUp(300);
     })
+
+    //这个地方是上面的banner
+   
+    $('.nav-c').on('mouseenter','.nav-item',function() {
+        $(this).find('.header-nav-menu').stop(true).slideDown(300);
+    })
+    $('.nav-c').on('mouseleave','.nav-item',function() {
+        $(this).find('.header-nav-menu').stop(true).slideUp(300);
+    })
+
+    
+
+
 
     // var mySwiper = new Swiper('.swiper-container', {
     //     direction: 'vertical', // 垂直切换选项
@@ -29,8 +41,6 @@ export default function fn1(){
     //     }
       
     //   })  
-
-  
 }
  
 

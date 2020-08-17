@@ -9,7 +9,11 @@ const del = require('del');
 task('delDist',async ()=>{
   await del('./dist');
 })
-
+//处理请求图片
+task('images', async ()=>{
+  src('./images/**/*.*')
+  .pipe(dest('./dist/images'))
+})
 // 处理图片
 task('image', async ()=>{
   src('./image/**/*.*')
@@ -48,7 +52,6 @@ task('script', async ()=>{
 task('data', async ()=>{
   src('./data/*.json')
   .pipe(dest('./dist/data'))
-  .pipe(load.connect.reload())
 })
 // 处理html
 task('html', async ()=>{
@@ -76,4 +79,4 @@ task('connect',async ()=>{
 })
 
 // 构建生产包
-task('build',series('data','delDist','image','sass','script','html','connect','font'))
+task('build',series('images','data','delDist','image','sass','script','html','connect','font'))
