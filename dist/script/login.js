@@ -7,24 +7,12 @@
 // btn_l.onclick = function() {
 //     this.className 
 // }
-$('.login-tal-l').click(function() {
-    $(this).addClass('select');
-    // 点击后插入节点
-    // $('.login-contentbox').html(`
-
-
-    // `);
-
-})
+$('.login-tal-l').addClass('select');
+ 
 $('.login-contentbox').on('click','.login-tal-l',function(e) {
-    console.log(e);
-    //
-    $(this).find('.login-tal-r').removeClass('select');
-    $(e).addClass('select');
-    // $(this).find('form-login').attr('display','display');
-    // $(this).find('form-login').attr('display','display');
+    $(this).closest('.login-contentbox').find('.login-tal-r').removeClass('select');
+    $('.login-tal-l').addClass('select');
     $(this).find('.form-login').empty(); 
-
     $('.form-login').html(`
     <div class="acountLogin">
     <div class="input1">
@@ -56,9 +44,10 @@ $('.login-contentbox').on('click','.login-tal-l',function(e) {
     `);
 })
 $('.login-contentbox').on('click','.login-tal-r',function(e) {
-    console.log(e);
-    $(e).addClass('select');
-    $(this).find('.login-tal-l').removeClass('select');
+    //移除左边按钮颜色
+    $(this).closest('.login-contentbox').find('.login-tal-l').removeClass('select');
+    //右边添加颜色    
+    $('.login-tal-r').addClass('select');
     $(this).find('.form-login').empty(); 
     $('.form-login').html(`
     <div class="twocode">
@@ -68,4 +57,42 @@ $('.login-contentbox').on('click','.login-tal-r',function(e) {
         <p>小米手机可打开「设置」>「小米帐号」扫码登录</p>
     </div>
     `);
-})
+});
+
+//给登录按钮注册点击事件
+$('.form-login-et').on('click','.login-enter',function(e){
+    // 获取账号密码
+    var username = $('.form-login-count').val();
+    var password = $('.form-login-pw').val();
+    if(!username || !password){
+        alert('用户名或者密码不能为空~');
+        return;
+    }
+    
+    console.log(username);
+    console.log(password);
+    // 请求数据
+    $.ajax({
+        url: "../data/user.json",
+        type: "get",
+        dataType:"json",
+        success: function(json) {
+            console.log(json);
+            console.log(json.username);
+            console.log(json.password);
+            
+            if(username == json.username && username == json.username){
+                console.log('输入正确');
+                //跳转页面
+                window.location.href='../pages/index.html';
+            }else{
+                alert('密码或者账号有误~');
+            }
+        },
+        error: function() {
+            alert('请求失败');
+        }
+    });
+
+});
+

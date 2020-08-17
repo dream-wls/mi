@@ -6,24 +6,42 @@ $.ajax({
     success:function(json){
         // console.log(json.topNav);
         var topNav = json.topNav;
-        // topNav.each(
-        // )
-        // for(key in json.topNav){
-        //     console.log(key);
-        // }
+        // topNav.push({title: "服务"},{title: "社区"});
+        console.log(topNav);
         for(var i = 0; i < topNav.length; i++){
             // console.log(topNav[i].title);
             // console.log(topNav[i].childs);
-            // var topNavChildsArr = topNav[i].childs;
-            // for(var i = 0; i < topNavChildsArr.length; i++){
-            //     // console.log(topNavChildsArr[i]);
-            // }
-            if(topNav[i].childs){
-                var childsArr = topNav[i].childs;
-                for(var j = 0; j < childsArr.length; j++){
-                    console.log(childsArr[j].id);
-                }
+            console.log(topNav.length);
+            console.log('========');
+            console.log($('.nav-ul'));
+            console.log(topNav[i].title);
+            $(`<li class="nav-item">
+                    <a class="nav-item-my" href="javascript:void(0)">
+                        ${topNav[i].title}
+                    </a>
+                </li>
+            `).appendTo(".nav-c .nav-ul");
+            console.log(topNav[i].title);
+            var topNavChildsArr = topNav[i].childs;
+            //创建一个节点
+            var node = $(`
+                
+            `);
+            for(var j = 0; j < topNavChildsArr.length; j++){
+               
+                // console.log(topNavChildsArr[i]);
+                if(topNav[j].childs){
+                                var childsArr = topNav[j].childs;
+                                for(var n = 0; n < childsArr.length; n++){
+                                    // console.log(childsArr[j].id);
+                                    // console.log(childsArr[j].a);
+                                    // console.log(childsArr[j].i);
+                                    // console.log('------------');
+                                }
+                            }
+
             }
+            
         }
         // $.each(topNav,function(i,item){
         //     //这个地方是打印了每个nav中的数据

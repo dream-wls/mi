@@ -13,7 +13,7 @@ export default function fn1(){
     })
 
     //这个地方是上面的banner
-   
+   console.log($('.nav-item'));
     $('.nav-c').on('mouseenter','.nav-item',function() {
         $(this).find('.header-nav-menu').stop(true).slideDown(300);
     })
