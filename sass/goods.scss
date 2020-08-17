@@ -2,11 +2,42 @@
     width: 1226px;
     margin: 0px auto;
 }
+@font-face {
+	font-family: 'iconfont';
+	src: url('../myfont/iconfont.eot');
+	src: url('../myfont/iconfont.eot?#iefix') format('embedded-opentype'),
+		url('../myfont/iconfont.woff2') format('woff2'),
+		url('../myfont/iconfont.woff') format('woff'),
+		url('../myfont/iconfont.ttf') format('truetype'),
+		url('../myfont/iconfont.svg#iconfont') format('svg');
+  }
+
+.iconfont {
+font-family: "iconfont" !important;
+font-size: 16px;
+font-style: normal;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
 .container {
     width: 100%;
     height: 60px;
     line-height: 60px;
-    background-color: red;
+    position: relative;
+    z-index: 4;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.07);
+    box-shadow: 0 5px 5px rgba(0,0,0,.07);
+    // background-color: red;
     h2 {
         float: left;
         margin: 0;
@@ -18,9 +49,24 @@
     }
     .container-left {
         float: left;
+        span {
+            margin: 0 .5em;
+            color: #424242;
+        }
+        a{
+            color: #616161;
+        }
     }
     .container-right {
         float: right;
+        span {
+            margin: 0 .5em;
+            color: #e0e0e0;
+        }
+        a {
+            color: #616161;
+
+        }
     }
     &::after {
     content: " ";
@@ -150,23 +196,46 @@
             border: 1px solid #e0e0e0;
             margin: 20px 0;
             .address-iconfont {
+                display: inline-block;
+                font-size: 20px;
+                width: 20px;
+                height: 20px;
 
             }
             .address-con {
+                .address-text {
+                    span {
+                        color: #333;
+                        margin-right: 14px;
+                    }
+                    a {
+                        color: #ff6700;
+                        font-size: 14px;
+                    }
+                }
+                .address-state {
+                    color: #ff6700;
+                    font-size: 14px;
+
+                }
+
                 
             }
         }
         .buy-option {
-            width: 135px;
-            height: 600px;
+            width: 300px;
+            // height: 600px;
+
             .buy-box-child {
+                width: 600px;
+                margin-bottom: 30px;
                 .title {
                     color: #333;
                     font-size: 18px;
                 }
                 .clearfix {
                     li {
-                        margin-right: 12px;
+                        margin-right: 6px;
                         margin-top: 10px;
                         line-height: 42px;
                         height: 42px;
@@ -181,7 +250,7 @@
                         font-size: 16px;
                         text-align: center;
                         a{
-                            
+                            color: #757575;
                         }
                     }
                     .active {
@@ -248,6 +317,10 @@
                     float: left;
                 }
                 .service-text {
+                    cursor: pointer;
+                    .service-box-ul {
+                        margin-bottom: 30px;
+                    }
                     h3 {
                         font-size: 18px;
                         margin: 0 0 10px 0;
@@ -289,6 +362,12 @@
                             vertical-align: middle;
                             margin-top: -4px;
                         }
+                     
+                        a {
+                            color: #ff6700;
+                            margin: 0 2px;
+                            display: inline-block;
+                        }
                     }
                     .price {
                         position: absolute;
@@ -309,6 +388,9 @@
                     list-style: none;
                     line-height: 30px;
                     color: #616161;
+                    span {
+                        float: right;
+                    }
                 }
             }
             .total-price {
