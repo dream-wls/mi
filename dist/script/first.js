@@ -21,6 +21,11 @@ export default function fn1(){
         $(this).find('.header-nav-menu').stop(true).slideUp(300);
     })
 
+
+
+    //banner 图的功能
+    
+    //小米倒计时
     
 
 

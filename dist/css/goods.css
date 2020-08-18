@@ -27,7 +27,8 @@
   width: 100%;
   height: 60px;
   line-height: 60px;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 4;
   background: #fff;
   border-top: 1px solid #e0e0e0;
@@ -74,17 +75,21 @@
     .product-box .product-box-banner .swiper-page-box {
       width: 100%;
       text-align: center;
-      width: 560px;
-      height: 20px; }
+      width: 500px;
+      height: 20px;
+      padding-left: 70px; }
       .product-box .product-box-banner .swiper-page-box span {
         display: inline-block;
-        background: red;
+        text-align: center;
+        background: #ccc;
         width: 50px;
         height: 3px;
         border-radius: 0;
         border: 0;
         float: left;
         margin: 0 4px; }
+      .product-box .product-box-banner .swiper-page-box .swiper-bullet-active {
+        background: #a3a3a3; }
   .product-box .product-con {
     width: 600px;
     margin-left: 20px;
@@ -175,10 +180,16 @@
       border: 1px solid #e0e0e0;
       margin: 20px 0; }
       .product-box .product-con .product-address .address-iconfont {
+        float: left;
         display: inline-block;
         font-size: 20px;
         width: 20px;
-        height: 20px; }
+        height: 20px;
+        position: absolute;
+        left: 20px;
+        top: 26px;
+        font-size: 20px;
+        color: #999; }
       .product-box .product-con .product-address .address-con .address-text span {
         color: #333;
         margin-right: 14px; }

@@ -6,6 +6,62 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1890514",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "3889116",
+      "name": "love ",
+      "font_class": "love",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "4865724",
+      "name": "加入购物车",
+      "font_class": "jiarugouwuche",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "9794757",
+      "name": "上箭头",
+      "font_class": "jiantou",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "11930031",
+      "name": "√",
+      "font_class": "icon-test2",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "2681706",
+      "name": "闪电",
+      "font_class": "shandian",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "1447738",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "5881143",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
       "icon_id": "90513",
       "name": "15天无理由退货",
       "font_class": "15tianwuliyoutuihuo",
@@ -179,13 +235,6 @@
       "font_class": "search",
       "unicode": "e6e1",
       "unicode_decimal": 59105
-    },
-    {
-      "icon_id": "10678452",
-      "name": "to go",
-      "font_class": "togo",
-      "unicode": "e6e3",
-      "unicode_decimal": 59107
     },
     {
       "icon_id": "12865651",

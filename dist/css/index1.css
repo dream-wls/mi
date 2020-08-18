@@ -449,7 +449,12 @@ body, html {
     width: 1226px;
     height: 398px;
     margin-bottom: 22px;
-    margin-top: 26px; }
+    margin-top: 26px;
+    text-align: center; }
+    .page-main .page-flashbuy .flashicon {
+      font-size: 100px;
+      margin-left: 50px;
+      color: red; }
     .page-main .page-flashbuy .flashbuy-content {
       position: relative; }
       .page-main .page-flashbuy .flashbuy-content .flashbuy-title {
