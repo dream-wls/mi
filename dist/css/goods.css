@@ -71,6 +71,20 @@
       .product-box .product-box-banner .img-box img {
         width: 560px;
         height: 560px; }
+    .product-box .product-box-banner .swiper-page-box {
+      width: 100%;
+      text-align: center;
+      width: 560px;
+      height: 20px; }
+      .product-box .product-box-banner .swiper-page-box span {
+        display: inline-block;
+        background: red;
+        width: 50px;
+        height: 3px;
+        border-radius: 0;
+        border: 0;
+        float: left;
+        margin: 0 4px; }
   .product-box .product-con {
     width: 600px;
     margin-left: 20px;
@@ -315,37 +329,42 @@
         color: #ff6700;
         font-size: 24px;
         padding-top: 20px; }
-    .product-box .product-con .btn-box .sale-btn {
-      float: left;
-      text-align: center;
-      width: 298px;
-      height: 52px;
-      line-height: 52px;
-      font-size: 16px;
-      background: #ff6700;
-      border-color: #ff6700;
-      display: inline-block;
-      margin-right: 10px; }
-      .product-box .product-con .btn-box .sale-btn a {
-        color: #fff; }
-    .product-box .product-con .btn-box .favorite-btn {
-      float: left;
-      display: block;
-      width: 140px;
-      height: 52px;
-      line-height: 52px;
-      padding: 0;
-      margin: 0;
-      border: 1px solid #b0b0b0;
-      text-align: center;
-      cursor: pointer;
-      background: #b0b0b0;
-      border-color: #b0b0b0;
-      transition: all .4s;
-      font-size: 16px;
-      position: relative; }
-      .product-box .product-con .btn-box .favorite-btn a {
-        color: #fff; }
+    .product-box .product-con .btn-box {
+      margin: 10px 0 20px 0;
+      height: 54px; }
+      .product-box .product-con .btn-box .sale-btn {
+        float: left;
+        text-align: center;
+        width: 298px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 16px;
+        background: #ff6700;
+        border-color: #ff6700;
+        display: inline-block;
+        margin-right: 10px; }
+        .product-box .product-con .btn-box .sale-btn a {
+          color: #fff; }
+          .product-box .product-con .btn-box .sale-btn a em {
+            font-size: 14px; }
+      .product-box .product-con .btn-box .favorite-btn {
+        float: left;
+        display: block;
+        width: 140px;
+        height: 52px;
+        line-height: 52px;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #b0b0b0;
+        text-align: center;
+        cursor: pointer;
+        background: #b0b0b0;
+        border-color: #b0b0b0;
+        transition: all .4s;
+        font-size: 16px;
+        position: relative; }
+        .product-box .product-con .btn-box .favorite-btn a {
+          color: #fff; }
     .product-box .product-con .after-sale-info {
       width: 600px;
       height: 82px; }
@@ -357,3 +376,19 @@
         cursor: default;
         white-space: nowrap;
         color: #b0b0b0; }
+  .product-box .section-view {
+    width: 100%;
+    background: #ccc;
+    padding-bottom: 50px; }
+    .product-box .section-view .section-container {
+      width: 1226px;
+      height: 266px; }
+      .product-box .section-view .section-container h3 {
+        display: block;
+        background-color: red;
+        color: yellow;
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 1em 0; }
