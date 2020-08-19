@@ -46,6 +46,51 @@ export default function fn1(){
     //     }
       
     //   })  
+
+    //轮播图
+    //按钮
+    var flashBtnL =$('.flashbuy-btn-l');
+    var flashBtnR =$('.flashbuy-btn-r');
+
+    var flashbox = $('.flashbox');
+    console.log($('.flashbox'));
+    // flashBtnL.
+    // 注册点击事件
+    var width = 0;
+        $('.flashbuy-title').on('click','.flashbuy-btn-l',function() {
+            console.log('左边按钮');
+            if(width ==0){
+
+            }
+            width -= 978;
+            if(width <= 0) {
+                width = 0;
+            }
+            $('.flashlist').animate({
+                scrollLeft: width,
+            },1000);
+
+        })
+        $('.flashbuy-title').on('click','.flashbuy-btn-r',function() {
+            console.log('右边按钮');
+            width += 978;
+            if(width > 1956) {
+                width = 1956;
+            }
+            $('.flashlist').animate({
+                scrollLeft:width,
+            },1000);
+
+        })
+
+
+
+        
+
+
+
+
+
 }
  
 

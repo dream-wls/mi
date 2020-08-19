@@ -84,7 +84,11 @@ font-style: normal;
         .img-box {
             width: 560px;
             height: 560px;
+            position: relative;
             img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 560px;
                 height: 560px;
             }
@@ -105,15 +109,7 @@ font-style: normal;
                 border: 0;
                 float: left;
                 margin: 0 4px;
-                // width: 8px;
-                // height: 8px;
-                // display: inline-block;
-                // border: 2px solid #fff;
-                // border-color: hsla(0,0%,100%,.3);
-                // border-radius: 10px;
-                // overflow: hidden;
-                // background: rgba(0,0,0,.4);
-                // opacity: .8;
+                cursor: pointer;
             }
             .swiper-bullet-active {
                 background: #a3a3a3;

@@ -476,13 +476,16 @@ body, html {
           position: absolute;
           top: 24px;
           right: 0; }
+        .page-main .page-flashbuy .flashbuy-content .flashbuy-title .flash-btn-gray {
+          color: #e0e0e0;
+          cursor: default; }
         .page-main .page-flashbuy .flashbuy-content .flashbuy-title .flashbuy-btn-l {
           display: inline-block;
           width: 24px;
           height: 16px;
           padding: 3px 5px;
           margin-left: -1px;
-          border: 1px solid #e0e0e0;
+          border: 1px solid #b0b0b0;
           font-size: 16px;
           line-height: 16px;
           transition: color .5s;
@@ -496,7 +499,7 @@ body, html {
           height: 16px;
           padding: 3px 5px;
           margin-left: -1px;
-          border: 1px solid #e0e0e0;
+          border: 1px solid #b0b0b0;
           font-size: 16px;
           line-height: 16px;
           -webkit-transition: color .5s;
@@ -554,10 +557,16 @@ body, html {
       .page-main .page-flashbuy .flashbuy-content .flashbuy-row .flashlist {
         width: 978px;
         height: 340px;
-        margin-left: 14px; }
+        margin-left: 14px;
+        overflow: auto;
+        overflow-y: hidden;
+        overflow-x: hidden; }
+        .page-main .page-flashbuy .flashbuy-content .flashbuy-row .flashlist .flashbox {
+          width: 3000px;
+          overflow-y: hidden; }
         .page-main .page-flashbuy .flashbuy-content .flashbuy-row .flashlist .flashlist-iteam {
           border-top: 1px solid red;
-          width: 234px;
+          width: 235px;
           height: 339px;
           background: red;
           margin-right: 10px;
@@ -819,6 +828,11 @@ body, html {
             -webkit-transition: all .2s;
             transition: all .2s;
             overflow: hidden; }
+            .page-main .mi-video .box-bd li .figure-img span i {
+              font-size: 7px;
+              padding-left: 4px; }
+          .page-main .mi-video .box-bd li .figure-img:hover span {
+            background-color: #ff6700; }
         .page-main .mi-video .box-bd li .title {
           margin: 0 14px 6px;
           font-size: 14px;
