@@ -135,9 +135,11 @@ font-style: normal;
              0;
             padding-top: 8px;
             line-height: 1.5;
+            
             span {
-                color: rgb(255, 74, 0);
-            }
+                // display: inline;
+                    color: rgb(255, 74, 0);
+                }
         }
         .company-info {
             color: #ff6700;
