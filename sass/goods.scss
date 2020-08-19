@@ -131,8 +131,7 @@ font-style: normal;
         .sale-desc {
             color: #b0b0b0;
             margin: 0;
-            padding:
-             0;
+            padding: 0;
             padding-top: 8px;
             line-height: 1.5;
             
@@ -297,6 +296,9 @@ font-style: normal;
             }
         }
         .service-box {
+            .repair {
+                margin-bottom: 30px;
+            }
             .title {
                 font-size: 18px;
                 margin-bottom: 15px;
@@ -353,8 +355,10 @@ font-style: normal;
                     margin-left: 10px;
                     float: left;
                 }
+                
                 .service-text {
                     cursor: pointer;
+                    
                     .service-box-ul {
                         margin-bottom: 30px;
                     }
@@ -370,6 +374,9 @@ font-style: normal;
                             border-radius: 20px;
                             color: #fff;
                             margin-left: 2px;
+
+
+                            
                         }
                     }
                     .desc {
@@ -387,17 +394,38 @@ font-style: normal;
                     .agreement-box {
                         margin-top: 5px;
                         font-size: 14px;
-                        em {
-                            width: 24px;
-                            height: 24px;
-                            border-radius: 50%;
-                            border: 1px solid #b0b0b0;
-                            font-style: normal;
-                            line-height: 24px;
-                            color: #fff;
-                            font-size: 12px;
-                            vertical-align: middle;
-                            margin-top: -4px;
+                        // em {
+                        //     width: 24px;
+                        //     height: 24px;
+                        //     border-radius: 50%;
+                        //     border: 1px solid #b0b0b0;
+                        //     font-style: normal;
+                        //     line-height: 24px;
+                        //     color: #fff;
+                        //     font-size: 12px;
+                        //     vertical-align: middle;
+                        //     margin-top: -4px;
+                        // }
+                        i {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            margin: 0;
+                            // float: left;
+                        }
+                        .checkbox {
+                            display: inline-block;
+                            *zoom: 1;
+                            *display: inline;
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 8px;
+                            border: 1px solid #e0e0e0;
+                            background-color: #fff;
+                            vertical-align: -2px;
+                            font-size: 16px;
+                            line-height: 18px;
+                            text-align: center;
                         }
                      
                         a {

@@ -318,6 +318,19 @@ body, html {
 .sideBar li:hover {
   background: #ff6700; }
 
+.sideNav {
+  display: none;
+  position: absolute;
+  left: 234px;
+  top: 0;
+  z-index: 24;
+  height: 458px;
+  border: 1px solid #e0e0e0;
+  border-left: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18); }
+
 .banner .icon .icon-r,
 .banner .icon .icon-l {
   z-index: 5;
@@ -327,7 +340,8 @@ body, html {
   margin-top: -35px;
   position: absolute;
   font-size: 30px;
-  color: rgba(0, 0, 0, 0.5); }
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer; }
 
 .icon-l {
   left: 234px;
@@ -358,6 +372,10 @@ body, html {
   right: 35px;
   bottom: 25px; }
 
+.swiper-list .list-active {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(0, 0, 0, 0.4); }
+
 .swiper a {
   width: 6px;
   height: 6px;
@@ -365,7 +383,7 @@ body, html {
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  float: right;
+  float: left;
   background: rgba(0, 0, 0, 0.4);
   margin-left: 10px; }
 

@@ -85,7 +85,7 @@ $.ajax({
 })
 
 //点击事件
-$('.my-option-li').on('click','.option-li',function(e){
+$('.my-option-li').on('click','.3option-li',function(e){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
     console.log(e);
@@ -160,3 +160,27 @@ function valueByName(search, name) {
         return arr[1];
     }
 }
+
+    //小米倒计时
+    function timer() {
+        var target = new Date("2020/8/21");    
+        let d = new Date();
+        let resHour = target.getHours();
+        resHour = Number(resHour)
+        let resMin = target.getMinutes();
+        resMin = Number(resMin)
+        let diffMinSecs = target.getTime() - d.getTime();
+        let hours = parseInt(diffMinSecs / 1000 / 3600);
+        hours = Number(hours);
+        let min = parseInt(diffMinSecs % (1000 * 3600) / (1000 * 60));
+        min = Number(min);
+        let sec = parseInt(diffMinSecs % (1000 * 60) / 1000);
+        sec = Number(sec);
+
+        $(".endtime").find("span").eq(0).html( `${hours}`);
+        $(".endtime").find("span").eq(1).html( `${min}`);
+        $(".endtime").find("span").eq(2).html( `${sec}`);
+    }
+    setInterval(() => {
+        timer();
+    }, 1000);

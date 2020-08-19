@@ -231,6 +231,8 @@
             color: #757575; }
         .product-box .product-con .buy-option .buy-box-child .clearfix .active {
           border-color: #ff6700; }
+    .product-box .product-con .service-box .repair {
+      margin-bottom: 30px; }
     .product-box .product-con .service-box .title {
       font-size: 18px;
       margin-bottom: 15px;
@@ -311,17 +313,24 @@
         .product-box .product-con .service-box li .service-text .agreement-box {
           margin-top: 5px;
           font-size: 14px; }
-          .product-box .product-con .service-box li .service-text .agreement-box em {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            border: 1px solid #b0b0b0;
-            font-style: normal;
-            line-height: 24px;
-            color: #fff;
-            font-size: 12px;
-            vertical-align: middle;
-            margin-top: -4px; }
+          .product-box .product-con .service-box li .service-text .agreement-box i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0; }
+          .product-box .product-con .service-box li .service-text .agreement-box .checkbox {
+            display: inline-block;
+            *zoom: 1;
+            *display: inline;
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            border: 1px solid #e0e0e0;
+            background-color: #fff;
+            vertical-align: -2px;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center; }
           .product-box .product-con .service-box li .service-text .agreement-box a {
             color: #ff6700;
             margin: 0 2px;
