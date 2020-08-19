@@ -1,10 +1,7 @@
 // import './swiper.js'
 export default function fn1(){
     // 获取li元素
-   console.log('dfgdrg');
-    console.log( $('.head-buyC'));
     $('.head-buyC').mouseenter(function() {
-        console.log($(this).find('.head-buy-menu'));
         $(this).find('.head-buy-menu').stop(true).slideDown(300);
 
     })
@@ -13,7 +10,6 @@ export default function fn1(){
     })
 
     //这个地方是上面的banner
-   console.log($('.nav-item'));
     $('.nav-c').on('mouseenter','.nav-item',function() {
         $(this).find('.header-nav-menu').stop(true).slideDown(300);
     })
@@ -41,7 +37,6 @@ export default function fn1(){
             var swiperL = $('.mybanner .swiper-slide').length;
 
             index++;
-            console.log(index);
             if(index >= swiperL) {
                 index = swiperL;
             }
@@ -62,7 +57,6 @@ export default function fn1(){
         //banner 图的数字按钮
         $('.swiper').on('click','.swiper-list li',function(e) {
             index = $(this).index();
-            console.log($('.mybanner .swiper-slide').eq(index));
             $('.mybanner .swiper-slide').eq(index).css('opacity','1').siblings().css('opacity','0');
 
         }) 
@@ -108,7 +102,6 @@ export default function fn1(){
 
         // 点击小圆圈
         $('.swiper-list').on('click', '.list-active a', function () {
-            console.log(111);
             iNow = $(this).index();
             // $('.swiper-list a').eq(iNow).addClass('list-active');
             // $('.swiper-list a').eq(iNow).siblings().removeClasss('list-active');
@@ -167,12 +160,10 @@ export default function fn1(){
     var flashBtnR =$('.flashbuy-btn-r');
 
     var flashbox = $('.flashbox');
-    console.log($('.flashbox'));
     // flashBtnL.
     // 注册点击事件
     var width = 0;
         $('.flashbuy-title').on('click','.flashbuy-btn-l',function() {
-            console.log('左边按钮');
             if(width ==0){
 
             }
@@ -186,7 +177,6 @@ export default function fn1(){
 
         })
         $('.flashbuy-title').on('click','.flashbuy-btn-r',function() {
-            console.log('右边按钮');
             width += 978;
             if(width > 1956) {
                 width = 1956;
@@ -206,15 +196,79 @@ export default function fn1(){
 
 
 }
+    //侧边栏的渲染
+    $.ajax({
+        url:"../data/nav.json",
+        type:"get",
+        dataType:"json",
+        success: function(json){
+            var sideNavArr = json.sideNav ;
+            console.log('-----------');
+            // console.log(sideNavArr);
+
+            //获取侧边栏
+            //循环数组
+            var sideBarLis= $('.sideBar').children();
+            for(var i=0;i<sideNavArr.length;i++) {
+                //这个地方是每一大块的列表
+                //创建节点
+                var sideNavNode = $(`<div class="sideNav"> </div>`);
+                // 把它插入到li中
+                sideBarLis.each(function(){
+                    $(this).append(sideNavNode)
+                })
+                //我们设置样式
+                let width =0;
+
+                var col = Math.ceil(sideNavArr[i].child.length / 6);
+                for(let n=0; n<col;n++){
+                    //创建col个ul插入进去
+                    let ulNode = $(`<ul class="sideNav-ul"></ul>`);
+                    sideNavNode.append(ulNode);
+                    width += 250;
+
+                } 
+                //把父元素的宽度设置为width
+                $('.sideNav').css('width',width+'px');
+
+                for(var j=0;j< sideNavArr[i].child.length;j++){
+                    if(j%6==0){
+                        $('.sideNav .sideNav-ul')[j].append(`
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="${sideNavArr[i].child[j].img}" alt="">
+                                <span>${sideNavArr[i].child[j].title}</span>
+                            </a>
+                        </li>
+                        `);
+                    }
+                    console.log(sideNavArr[i].child[j]);
+                    //每一列是六个数据
+                }
+                // for(var j = 0;j< )
+
+               
+            }
+            console.log(sideNavArr[0].child.length);
+
+            // for(var j=0;j< sideNavArr[0].child.length;j++){
+            //     console.log(sideNavArr[0].child[j]);
+                
+            // }
+            // $('.sideNav-ul').eq(i).html
+                    // $(`
+                    //     <li>
+                    //         <a href="javascript:void(0)">
+                    //             <img src="${sideNavArr[i].child[j].img}" alt="">
+                    //             <span>${sideNavArr[i].child[j].title}</span>
+                    //         </a>
+                    //     </li>
+                                    
+                    // `).appendTo(node);
+
+        }
+    })
+
+
+
  
-
-
-// // 获取li元素
-// console.log( $('.right ul li'));
-// $('.right ul li').mouseenter(function() {
-//     $(this).find('.right-list').stop(true).slideDown(300);
-// })
-                                                       
-// $('.right ul li').mouseleave(function() {
-//     $(this).find('.right-list').stop(true).slideUp(300);
-// })

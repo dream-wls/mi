@@ -310,7 +310,7 @@ body, html {
   padding-top: 20px;
   color: #fff; }
 
-.sideBar li {
+.sideBar > li {
   height: 42px;
   line-height: 42px;
   padding-left: 30px; }
@@ -319,21 +319,34 @@ body, html {
   background: #ff6700; }
 
 .sideNav {
-  display: none;
+  height: 461px;
+  background-color: red;
   position: absolute;
+  z-index: 99;
   left: 234px;
-  top: 0;
-  z-index: 24;
-  height: 458px;
-  border: 1px solid #e0e0e0;
-  border-left: 0;
-  background: #fff;
-  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18); }
+  top: 0; }
+
+.sideNav-ul {
+  width: 248px;
+  height: 460px;
+  float: left; }
+  .sideNav-ul li {
+    width: 250px;
+    float: left; }
+    .sideNav-ul li a {
+      display: block;
+      padding: 18px 20px;
+      line-height: 40px;
+      color: #333;
+      -webkit-transition: color .2s;
+      transition: color .2s; }
+      .sideNav-ul li a img {
+        width: 40px;
+        height: 40px; }
 
 .banner .icon .icon-r,
 .banner .icon .icon-l {
-  z-index: 5;
+  z-index: 3;
   width: 41px;
   height: 69px;
   top: 50%;

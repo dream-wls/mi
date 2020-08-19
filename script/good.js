@@ -1,4 +1,3 @@
-console.log('good.js');
 
 // 获取按钮
 var number = $('.swiper-page-box span')
@@ -20,7 +19,6 @@ setInterval(() => {
 
 
 var id = valueByName(location.search,"id");
-console.log(id);
 
 //数据渲染
 $.ajax({
@@ -28,24 +26,20 @@ $.ajax({
     url: '../data/goodsIteam.json',
     dataType:'json',
     success: function(json) {
-        console.log(json);
         // 更改图片
 
         // img-box
         for(let i=0;i<json.length;i++){
             if(json[i].id == id){
-                console.log(json[i]);
                 let myjson = json[i];
                 //判断选择的是哪个
                 var optionLis = $('.my-option-li .option-li');
                 // console.log(optionLis);
                 for(let j=0;j<optionLis.length;j++){
                     // console.log(optionLis[j]);
-                    console.log($(optionLis[j]).hasClass('active'));
                     if( $(optionLis[j]).hasClass('active')){
                         // 然后我们进行数据的渲染
                         // myjson[j];
-                        console.log(myjson[j].title);
                         
                         $('.product-con h2').text(myjson[j].title);
                         $('.sale-desc').html(`
@@ -57,13 +51,10 @@ $.ajax({
 
                         //更改右边图片
                         var imgArrs = $('.img-box img');
-                        console.log(imgArrs);
                         for(let n=0;n<imgArrs.length;n++){
                             // imgArrs[n]
-                            console.log(imgArrs[n]);
                             // imgUrl
                             myjson[j].imgUrl;
-                            console.log(myjson[j].imgUrl);
                             imgArrs[n].src = myjson[j].imgUrl[n];
                         }
                          
@@ -88,7 +79,6 @@ $.ajax({
 $('.my-option-li').on('click','.3option-li',function(e){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
-    console.log(e);
 
 
     $.ajax({
@@ -96,13 +86,11 @@ $('.my-option-li').on('click','.3option-li',function(e){
         url: '../data/goodsIteam.json',
         dataType:'json',
         success: function(json) {
-            console.log(json);
             // 更改图片
     
             // img-box
             for(let i=0;i<json.length;i++){
                 if(json[i].id == id){
-                    console.log(json[i]);
                     let myjson = json[i];
                     //判断选择的是哪个
                     var optionLis = $('.my-option-li .option-li');
@@ -113,7 +101,6 @@ $('.my-option-li').on('click','.3option-li',function(e){
                         if( $(optionLis[j]).hasClass('active')){
                             // 然后我们进行数据的渲染
                             // myjson[j];
-                            console.log(myjson[j].title);
                             
                             $('.product-con h2').text(myjson[j].title);
                             $('.sale-desc').html(`
@@ -184,3 +171,4 @@ function valueByName(search, name) {
     setInterval(() => {
         timer();
     }, 1000);
+
