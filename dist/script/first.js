@@ -165,7 +165,6 @@ export default function fn1(){
     var width = 0;
         $('.flashbuy-title').on('click','.flashbuy-btn-l',function() {
             if(width ==0){
-
             }
             width -= 978;
             if(width <= 0) {
@@ -174,7 +173,6 @@ export default function fn1(){
             $('.flashlist').animate({
                 scrollLeft: width,
             },1000);
-
         })
         $('.flashbuy-title').on('click','.flashbuy-btn-r',function() {
             width += 978;
@@ -184,17 +182,7 @@ export default function fn1(){
             $('.flashlist').animate({
                 scrollLeft:width,
             },1000);
-
         })
-
-
-
-        
-
-
-
-
-
 }
     //侧边栏的渲染
     $.ajax({
@@ -203,72 +191,132 @@ export default function fn1(){
         dataType:"json",
         success: function(json){
             var sideNavArr = json.sideNav ;
-            console.log('-----------');
-            // console.log(sideNavArr);
-
             //获取侧边栏
             //循环数组
             var sideBarLis= $('.sideBar').children();
-            for(var i=0;i<sideNavArr.length;i++) {
+            for(let i=0;i<sideNavArr.length;i++) {
+                var sideNavUl= $('.sideBar li .sideNav');
                 //这个地方是每一大块的列表
                 //创建节点
                 var sideNavNode = $(`<div class="sideNav"> </div>`);
                 // 把它插入到li中
-                sideBarLis.each(function(){
-                    $(this).append(sideNavNode)
-                })
+                $(sideBarLis[i]).append(sideNavNode);
                 //我们设置样式
                 let width =0;
-
+                width=0;
+                //创建多少个ul
                 var col = Math.ceil(sideNavArr[i].child.length / 6);
+                let m = 0;
                 for(let n=0; n<col;n++){
                     //创建col个ul插入进去
                     let ulNode = $(`<ul class="sideNav-ul"></ul>`);
-                    sideNavNode.append(ulNode);
                     width += 250;
-
-                } 
-                //把父元素的宽度设置为width
-                $('.sideNav').css('width',width+'px');
-
-                for(var j=0;j< sideNavArr[i].child.length;j++){
-                    if(j%6==0){
-                        $('.sideNav .sideNav-ul')[j].append(`
+                    for(var k = 0;k < 6; k++){
+                        var newLi = $(`
                         <li>
                             <a href="javascript:void(0)">
-                                <img src="${sideNavArr[i].child[j].img}" alt="">
-                                <span>${sideNavArr[i].child[j].title}</span>
+                                <img src="${ sideNavArr[i].child[m].img }" alt="">
+                                <span>${ sideNavArr[i].child[m].title } </span>
                             </a>
                         </li>
                         `);
+                        ulNode.append(newLi);
+                       sideNavNode.append(ulNode);
+                        m++;
+                        if(m >= sideNavArr[i].child.length){
+                            break;
+                        }
                     }
-                    console.log(sideNavArr[i].child[j]);
-                    //每一列是六个数据
-                }
-                // for(var j = 0;j< )
 
+                    
+                } 
+                //把父元素的宽度设置为width
+                $('.sideNav').eq(i).css('width',width+'px');
                
             }
-            console.log(sideNavArr[0].child.length);
-
-            // for(var j=0;j< sideNavArr[0].child.length;j++){
-            //     console.log(sideNavArr[0].child[j]);
-                
-            // }
-            // $('.sideNav-ul').eq(i).html
-                    // $(`
-                    //     <li>
-                    //         <a href="javascript:void(0)">
-                    //             <img src="${sideNavArr[i].child[j].img}" alt="">
-                    //             <span>${sideNavArr[i].child[j].title}</span>
-                    //         </a>
-                    //     </li>
-                                    
-                    // `).appendTo(node);
+ 
 
         }
     })
 
+    
 
+    //上面栏的渲染
+    //获取li元素
+    //这个是上面导航栏上的 li元素
+    var myLis = $('.nav-item');
+    console.log(myLis);
+    // 给每一个li注册事件
+    for(let i = 0;i< myLis.length;i++) {
+        myLis.eq(i).attr('id',i);
+        $('.nav-ul').on('mouseover','.nav-item',function(e) {
+            // 显示对象的下拉列表
+            $('.header-nav-menu').css('display','block');
+            // console.log('000000000',$(e));
+        });
+        $('.nav-ul').on('mouseleave','.nav-item',function() {
+            // 显示对象的下拉列表
+            $('.header-nav-menu').css('display','none');
+        });
+    }
+
+    //这个地方是上面的列表每一个li
+    $('.nav-ul').on('mouseenter','.nav-item',function() {
+        $(this).find('.nav-ul').stop(true).slideDown(300);
+    })
+    $('.nav-ul').on('mouseleave','.nav-item',function() {
+        $(this).find('.nav-ul').stop(true).slideUp(300);
+    })
+    
+
+
+
+    //渲染数据
+        $('.nav-ul').on('mouseover','.nav-item',function(e) {
+            console.log('id',$(this).attr('id'));
+            let index = Number($(this).attr('id'));
+            // 显示对象的下拉列表
+            $.ajax({
+                url: "../data/nav.json",
+                type: "get",
+                dataType: "json",
+                success: function(json) {
+                    var topNav = json.topNav;
+                    console.log(topNav);
+                    // 这个地方是每个ul
+                    // for(let n = 0;n < topNav.length;n++){
+                        //遍历每一个li
+                        var newNodeUl = $(`<ul></ul>`);
+                        for(let m = 0;m < topNav[index].childs.length;m++) {
+                            // console.log('topNav[j].childs',topNav[j].childs);
+                            var newNode = $(`
+                                <li>
+                                    <a class="item-children" href="javascript:void(0)">
+                                        <div class="children-img"><img src="${topNav[index].childs[m].img}" alt=""></div>
+                                        <div class="children-title">${topNav[index].childs[m].a}</div>
+                                        <p class="children-price">${topNav[index].childs[m].i}</p>
+                                    </a>
+                                </li>
+                            `);
+                            // 把每个Li插入到ul中
+                            newNodeUl.append(newNode);
+                        }
+                        $('.header-menu-box').empty();
+                        $('.header-menu-box').append(newNodeUl);
+                }
+            })
+        });
+
+
+   
+
+        
+
+
+
+
+
+
+ 
 
  

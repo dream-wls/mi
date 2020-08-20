@@ -45,6 +45,14 @@ body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.clearfix:after {
+  /*伪元素是行内元素 正常浏览器清除浮动方法*/
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
 /*设置中心部分*/
 .top-steamer img {
   width: 100%;
@@ -185,6 +193,10 @@ body, html {
     .nav-l .mylogo:hover {
       background: url(../image/mi-home.png); }
 
+.mynavBox {
+  position: relative;
+  width: 100%; }
+
 .nav-m {
   position: absolute;
   left: 69px;
@@ -203,18 +215,22 @@ body, html {
 
 .header-nav-menu {
   width: 100%;
-  width: 1500px;
   height: 230px;
   position: absolute;
   top: 55px;
   left: 0px;
   z-index: 99;
-  display: none; }
+  background-color: #fff;
+  display: none;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18); }
+
+.header-menu-box li {
+  float: left; }
 
 .item-children {
   display: block;
-  width: 204px;
-  height: 195	px;
+  width: 176px;
+  height: 169px;
   padding: 35px 12px 0;
   text-align: center; }
   .item-children .children-img img {
@@ -315,16 +331,24 @@ body, html {
   line-height: 42px;
   padding-left: 30px; }
 
-.sideBar li:hover {
+.sideBar > li:hover {
   background: #ff6700; }
 
+.sideNav li a:hover {
+  color: #ff6700; }
+
 .sideNav {
+  display: none;
   height: 461px;
-  background-color: red;
+  background-color: #fff;
   position: absolute;
   z-index: 99;
   left: 234px;
-  top: 0; }
+  top: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18); }
+
+.sideBar li:hover .sideNav {
+  display: block; }
 
 .sideNav-ul {
   width: 248px;
