@@ -309,8 +309,26 @@ font-style: normal;
 .nav-r .search {
 	width: 296px;
 	height: 48px;
-	// border: 1px solid #afafaf;
-
+}
+.search-ul {
+	display: none;
+	width: 296px;
+	height: 240px;
+	background-color: yellow;
+	z-index: 80;
+	position: relative;
+	top: 50px;
+	left: 0;
+}
+.search-li {
+	width: 295px;
+	height: 35px;
+	line-height: 35px;
+	background-color: red;
+	// background-color: red;
+	// position: relative;
+	// top: 50px;
+	// left: 0;
 }
 .nav-r .text{
 	border: none;
@@ -322,6 +340,11 @@ font-style: normal;
 	border: 1px solid #afafaf;
 	border-right: none;
 	transition: all .2s;
+	// &:hover {
+	// 	border: 1px solid #ff6700;
+	// 	border-right: none;
+
+	// }
 }
 .nav-r .button {
 	display: block;
@@ -984,12 +1007,15 @@ background: #f5f5f5;
 				}
 
 				.figure {
-					background-color: red;
 					position: absolute;
 					right: 35px;
 					top: 48px;
 					width: 48px;
 					height: 48px;
+					line-height: 48px;
+					font-size: 48px;
+					text-align: center;
+
 					color: #ff6700;
 					img {
 						width: 48px;
@@ -1229,6 +1255,9 @@ background: #f5f5f5;
 				color: #757575;
 				margin: 10px 0 0;
 				font-size: 12px;
+				&:hover {
+					color: #ff6700;
+				}
 			}
 		}
 		.contact {

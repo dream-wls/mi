@@ -130,7 +130,7 @@ export default function fn1(){
     
     //小米倒计时
     function timer() {
-        var target = new Date("2020/8/21");    
+        var target = new Date("2020/9/5");    
         let d = new Date();
         let resHour = target.getHours();
         resHour = Number(resHour)
@@ -249,63 +249,106 @@ export default function fn1(){
     // 给每一个li注册事件
     for(let i = 0;i< myLis.length;i++) {
         myLis.eq(i).attr('id',i);
-        $('.nav-ul').on('mouseover','.nav-item',function(e) {
+        $('.nav-ul').on('mouseover','.nav-ul',function(e) {
             // 显示对象的下拉列表
             $('.header-nav-menu').css('display','block');
             // console.log('000000000',$(e));
         });
-        $('.nav-ul').on('mouseleave','.nav-item',function() {
+        $('.nav-ul').on('mouseleave','.nav-ul',function() {
             // 显示对象的下拉列表
             $('.header-nav-menu').css('display','none');
         });
     }
 
-    //这个地方是上面的列表每一个li
-    $('.nav-ul').on('mouseenter','.nav-item',function() {
-        $(this).find('.nav-ul').stop(true).slideDown(300);
+    //导航栏下滑的动画
+    $('.nav-ul').on('mouseenter','.nav-item-my',function() {
+        $('.header-nav-menu').stop(true).slideDown(500);
     })
-    $('.nav-ul').on('mouseleave','.nav-item',function() {
-        $(this).find('.nav-ul').stop(true).slideUp(300);
+    $('.nav-ul').on('mouseleave','.nav-item-my',function() {
+        $('.header-nav-menu').stop(true).slideUp(500);
     })
     
 
+//渲染数据
+    $('.nav-ul').on('mouseover','.nav-item',function(e) {
+        console.log('id',$(this).attr('id'));
+        let index = Number($(this).attr('id'));
+        // 显示对象的下拉列表
+        $.ajax({
+            url: "../data/nav.json",
+            type: "get",
+            dataType: "json",
+            success: function(json) {
+                var topNav = json.topNav;
+                console.log(topNav);
+                // 这个地方是每个ul
+                // for(let n = 0;n < topNav.length;n++){
+                    //遍历每一个li
+                    var newNodeUl = $(`<ul></ul>`);
+                    for(let m = 0;m < topNav[index].childs.length;m++) {
+                        // console.log('topNav[j].childs',topNav[j].childs);
+                        var newNode = $(`
+                            <li>
+                                <a class="item-children" href="javascript:void(0)">
+                                    <div class="children-img"><img src="${topNav[index].childs[m].img}" alt=""></div>
+                                    <div class="children-title">${topNav[index].childs[m].a}</div>
+                                    <p class="children-price">${topNav[index].childs[m].i}</p>
+                                </a>
+                            </li>
+                        `);
+                        // 把每个Li插入到ul中
+                        newNodeUl.append(newNode);
+                    }
+                    $('.header-menu-box').empty();
+                    $('.header-menu-box').append(newNodeUl);
+            }
+        })
+    });
+
+    //当选框获取到焦点的时候
+    $('.search').on('focus','.text',function() {
+        $('.text').css('border','1px solid #ff6700');
+        $('.text').css('border-right','none');
+        $('.button').css('border','1px solid #ff6700');
+    })
+
+    //当选框失去焦点的时候
+    $('.search').on('blur','.text',function() {
+        $('.text').css('border','1px solid #afafaf');
+        $('.text').css('border-right','none');
+        $('.button').css('border','1px solid #afafaf');
+    })
+
+    //使用百度的请求 当在选框中进行输入的时候
+    $('.search').on('focus','.text',function() {
 
 
-    //渲染数据
-        $('.nav-ul').on('mouseover','.nav-item',function(e) {
-            console.log('id',$(this).attr('id'));
-            let index = Number($(this).attr('id'));
-            // 显示对象的下拉列表
-            $.ajax({
-                url: "../data/nav.json",
-                type: "get",
-                dataType: "json",
-                success: function(json) {
-                    var topNav = json.topNav;
-                    console.log(topNav);
-                    // 这个地方是每个ul
-                    // for(let n = 0;n < topNav.length;n++){
-                        //遍历每一个li
-                        var newNodeUl = $(`<ul></ul>`);
-                        for(let m = 0;m < topNav[index].childs.length;m++) {
-                            // console.log('topNav[j].childs',topNav[j].childs);
-                            var newNode = $(`
-                                <li>
-                                    <a class="item-children" href="javascript:void(0)">
-                                        <div class="children-img"><img src="${topNav[index].childs[m].img}" alt=""></div>
-                                        <div class="children-title">${topNav[index].childs[m].a}</div>
-                                        <p class="children-price">${topNav[index].childs[m].i}</p>
-                                    </a>
-                                </li>
-                            `);
-                            // 把每个Li插入到ul中
-                            newNodeUl.append(newNode);
-                        }
-                        $('.header-menu-box').empty();
-                        $('.header-menu-box').append(newNodeUl);
+        console.log('ajax');
+        // 进行ajax请求
+        $.ajax({
+            url:"http://suggestion.baidu.com/su",
+            menthod: "get",
+            data: 'wd=' + $(this).val(),
+            dataType: "jsonp",
+            jsonp: "cb",
+            success: function() {
+                //创建一个节点
+                var searchStr = "";
+                for(var i =0;i < data.s.length;i++) {
+                    searchStr +=`
+                    <li href="http://www.baidu.com">
+                        ${data.s[i]}
+                    </li>
+                    `
                 }
-            })
-        });
+                $(".search-ul").html(searchStr);
+            },
+            error: function() {
+                console.log('请求失败');
+            }
+        })
+    });
+
 
 
    
